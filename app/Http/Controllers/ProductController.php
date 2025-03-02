@@ -61,11 +61,13 @@ class ProductController extends Controller
     public function destroy(string $id)
     { 
         return "Mahsulot ochirildi ID:".$id;
+    
     }
 
     public function search(Request $request)
     {
         return "Qidiruv natijalari".$request;
+    
     }
 
 }
