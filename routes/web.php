@@ -8,9 +8,7 @@ Route::get('/', function () {
 });
 Route::get( "/products",[ProductController::class,"index"]);
 Route::get("/products/create",[ProductController::class,"create"]);
-Route::get("/products/{id}",[ProductController::class,"show"]);
-Route::get('/products/search', [ProductController::class, 'search'])->name('products.search');
+Route::get('/products/search', [ProductController::class, "search"])->name('products.search');
 
-Route::prefix('admin')->group(function () {
-    Route::delete('/products/{id}', [ProductController::class, 'destroy']); 
-});
+ Route::get("products/destroy/{id}",[ProductController::class,"destroy"]);
+Route::get("/products/{id}",[ProductController::class,"show"]);
